@@ -6,6 +6,13 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <ul>
+      <% messages.forEach(function(msg){%>
+        <li style="font-weight: bold; font-size: 16px"><%= msg.user %></li>
+        <li style="font-size: 14px; margin: 2px 0 6px;"><%= msg.text %></li>
+        <li style="font-size: 12px; margin-bottom: 20px;"><%= msg.added %></li>
+        <% }) %>
+    </ul>
+    
   </body>
 </html>
