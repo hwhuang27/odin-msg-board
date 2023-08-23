@@ -1,5 +1,9 @@
 # Message Board Project
 
-Mock forum webpage made with Express using MongoDB database
+Mock forum page made with Express
 
 NodeJS practice project for [The Odin Project](https://www.theodinproject.com/).
+
+# TODO
+
+- Connect with MongoDB
