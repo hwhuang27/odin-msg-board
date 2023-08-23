@@ -23,4 +23,30 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* GET new user. */
+router.get('/new', function (req, res, next) {
+  res.render('form',
+    {
+      title: 'Form',
+      heading: 'Add a new post'
+    });
+});
+
+router.post('/new', function (req, res, next) {
+  const name = req.body.name;
+  const message = req.body.message;
+  
+  if(name && message){
+    messages.push(
+      {
+        text: message,
+        user: name,
+        added: new Date()
+      }
+    )
+  }
+
+  res.redirect('/');
+});
+
 module.exports = router;
